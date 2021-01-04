@@ -1,0 +1,11 @@
+*.pyc
+m5out
+.vscode
+results
+gem5art-env
+disk-image/packer
+disk-image/packer_cache
+disk-image/spec-2006/spec-2006-image/spec-2006
+disk-image/spec-2006/CPU2006v1.0.1.iso
+gem5
+vmlinux-4.19.83
