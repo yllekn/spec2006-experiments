@@ -5,6 +5,7 @@ from uuid import UUID
 from gem5art.artifact import Artifact
 from gem5art.run import gem5Run
 from gem5art.tasks.tasks import run_gem5_instance
+from gem5art.tasks.tasks import run_job_pool
 
 experiments_repo = Artifact.registerArtifact(
     command = '''
@@ -106,6 +107,7 @@ if __name__ == "__main__":
                   '471.omnetpp','473.astar','481.wrf','482.sphinx3',
                   '998.specrand','999.specrand']
 
+    jobs = []
     for cpu in cpus:
         for size in benchmark_sizes[cpu]:
             for benchmark in benchmarks:
@@ -124,4 +126,6 @@ if __name__ == "__main__":
                     cpu, benchmark, size, # params
                     timeout = 5*24*60*60 # 5 days
                 )
+                jobs.append(run)
                 run_gem5_instance.apply_async((run,))
+    run_job_pool(jobs)
