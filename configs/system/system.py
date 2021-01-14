@@ -132,6 +132,10 @@ class MySystem(System):
 
         self.createCPUThreads(self.detailed_cpu)
 
+        for i in range(num_cpus):
+            self.cpu[i].max_insts_any_thread = 1e+9
+
+
     def switchCpus(self, old, new):
         assert(new[0].switchedOut())
         m5.switchCpus(self, list(zip(old, new)))
