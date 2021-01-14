@@ -114,7 +114,7 @@ if __name__ == "__main__":
                 run = gem5Run.createFSRun(
                     'gem5 19 spec 2006 experiment', # name
                     'gem5/build/X86/gem5.opt', # gem5_binary
-                    'gem5-configs/run_spec.py', # run_script
+                    'configs/run_spec.py', # run_script
                     'results/{}/{}/{}'.format(cpu, size, benchmark), # relative_outdir
                     gem5_binary, # gem5_artifact
                     gem5_repo, # gem5_git_artifact
