@@ -123,7 +123,7 @@ if __name__ == "__main__":
                     'disk-image/spec2006/spec2006-image/spec2006', # disk_image
                     linux_binary, # linux_binary_artifact
                     disk_image, # disk_image_artifact
-                    cpu, benchmark, size, # params
+                    cpu, "classic", benchmark, size, # params
                     timeout = 5*24*60*60 # 5 days
                 )
                 jobs.append(run)
