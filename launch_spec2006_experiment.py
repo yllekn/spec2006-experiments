@@ -120,7 +120,7 @@ if __name__ == "__main__":
                     gem5_repo, # gem5_git_artifact
                     experiments_repo, # run_script_git_artifact
                     'vmlinux-4.19.83', # linux_binary
-                    'disk-image/spec2006/spec2006-image/spec2006', # disk_image
+                    'disk-image/spec-2006/spec-2006-image/spec-2006', # disk_image
                     linux_binary, # linux_binary_artifact
                     disk_image, # disk_image_artifact
                     cpu, "classic", benchmark, size, # params
