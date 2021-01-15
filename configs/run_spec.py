@@ -281,7 +281,7 @@ if __name__ == "__m5_main__":
 
     # run for 1 billion instructions
     for i in range(num_cpus):
-        self.cpu[i].max_insts_any_thread = 1e+9
+        self.cpu[i].max_insts_any_thread = 100;
 
     # running benchmark
     print("Benchmark: {}; Size: {}".format(benchmark_name, benchmark_size))
