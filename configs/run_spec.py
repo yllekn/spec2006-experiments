@@ -279,6 +279,10 @@ if __name__ == "__m5_main__":
         system.switchCpus(system.cpu, system.detailed_cpu)
         print("Switching done")
 
+    # run for 1 billion instructions
+    for i in range(num_cpus):
+        self.cpu[i].max_insts_any_thread = 1e+9
+
     # running benchmark
     print("Benchmark: {}; Size: {}".format(benchmark_name, benchmark_size))
     success, exit_cause = run_spec_benchmark()
