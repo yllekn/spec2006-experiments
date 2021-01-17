@@ -101,8 +101,9 @@ if __name__ == "__main__":
                        'timing': ['test']
                       }
     """
-    cpus = ['kvm']
-    benchmark_sizes = {'kvm':    ['test', 'ref']
+    cpus = ['kvm', 'atomic']
+    benchmark_sizes = {'kvm':    ['test', 'ref'],
+                       'atomic': ['test']
                       }
     benchmarks = ['401.bzip2','403.gcc','410.bwaves','416.gamess','429.mcf',
                   '433.milc','434.zeusmp','435.gromacs','436.cactusADM',
