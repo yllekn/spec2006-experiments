@@ -263,6 +263,10 @@ if __name__ == "__m5_main__":
     if not allow_listeners:
         m5.disableAllListeners()
 
+    # run for 100 instructions
+    for c in system.detailed_cpu:
+        c.max_insts_any_thread = 100
+
     # instantiate all of the objects we've created above
     m5.instantiate()
 
@@ -278,10 +282,6 @@ if __name__ == "__m5_main__":
         print("Switching to detailed CPU")
         system.switchCpus(system.cpu, system.detailed_cpu)
         print("Switching done")
-
-    # run for 1 billion instructions
-    for c in system.cpu:
-        c.max_insts_any_thread = 100
 
     # running benchmark
     print("Benchmark: {}; Size: {}".format(benchmark_name, benchmark_size))
