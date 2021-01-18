@@ -118,7 +118,7 @@ if __name__ == "__main__":
         for size in benchmark_sizes[cpu]:
             for benchmark in benchmarks:
                 run = gem5Run.createFSRun(
-                    'gem5 19 spec 2006 experiment', # name
+                    'SPEC2006_1_18_100INSTR', # name
                     'gem5/build/X86/gem5.opt', # gem5_binary
                     'configs/run_spec.py', # run_script
                     'results/{}/{}/{}'.format(cpu, size, benchmark), # relative_outdir
