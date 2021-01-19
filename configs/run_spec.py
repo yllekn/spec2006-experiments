@@ -199,7 +199,7 @@ def run_spec_benchmark():
     success = exit_cause == "m5_exit instruction encountered"
     if not success:
         print("Error while running benchmark: {}".format(exit_cause))
-        exit(1)
+    #    exit(1)
     print("Benchmark done")
     return success, exit_cause
 
