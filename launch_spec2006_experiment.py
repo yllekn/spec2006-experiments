@@ -93,7 +93,7 @@ linux_binary = Artifact.registerArtifact(
 )
 
 if __name__ == "__main__":
-    """
+   ## """
     cpus = ['kvm', 'atomic', 'o3', 'timing']
     benchmark_sizes = {'kvm':    ['test', 'ref'],
                        'atomic': ['test'],
@@ -105,6 +105,7 @@ if __name__ == "__main__":
     benchmark_sizes = {'kvm':    ['test', 'ref'],
                        'atomic': ['test']
                       }
+"""
     benchmarks = ['401.bzip2','403.gcc','410.bwaves','416.gamess','429.mcf',
                   '433.milc','434.zeusmp','435.gromacs','436.cactusADM',
                   '437.leslie3d','444.namd','445.gobmk','453.povray',
