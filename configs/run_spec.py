@@ -265,7 +265,7 @@ if __name__ == "__m5_main__":
 
     # run for 100 instructions
     for c in system.detailed_cpu:
-        c.max_insts_any_thread = 10000
+        c.max_insts_any_thread = 10000000
 
     # instantiate all of the objects we've created above
     m5.instantiate()
